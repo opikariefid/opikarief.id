@@ -66,7 +66,7 @@ var randomRelatedIndex, showRelatedPost;
                 for (var p = 0, a = x[q].link.length; p < a; p++) {
                     v = (x[q].link[p].rel == "alternate") ? x[q].link[p].href : "#"
                 }
-                c += '<div class="backlight-related-post-content"><a class="title" title="' + t + ' href="' + v + '"' + b + '>' + w + '</a><div class="desc"><img alt="' + t + '" class="image" src="' + r + '" style="width:' + d.thumbnailSize + ';height:' + d.thumbnailSize + '" title="' + t + '"><div class="content">' + u.substr(0,300) + '...</div>' + y + '</div><div class="jumplink"><a href="' + v + '" class="more" ' + b + '>' + d.moreText + '</a></div></div>'
+                c += '<div class="backlight-related-post-content"><a class="title" title="' + t + '" href="' + v + '"' + b + '>' + w + '</a><div class="desc"><img alt="' + t + '" class="image" src="' + r + '" style="width:' + d.thumbnailSize + ';height:' + d.thumbnailSize + '" title="' + t + '"><div class="content">' + u.substr(0,300) + '...</div>' + y + '</div><div class="jumplink"><a href="' + v + '" class="more" ' + b + '>' + d.moreText + '</a></div></div>'
             }
             s.innerHTML = c += "</div>" + y;
             d.callBack()
