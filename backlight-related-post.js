@@ -50,7 +50,7 @@ var randomRelatedIndex, showRelatedPost;
             var s = document.getElementById(d.containerId),
                 x = l(z.feed.entry),
                 A = d.widgetStyle,
-                c = d.widgetTitle + '<ul class="related-post-style-' + A + '">',
+                c = d.widgetTitle + '<div class="related-post-style-' + A + '">',
                 b = d.newTabLink ? ' target="_blank"' : "",
                 y = '<span style="display:block;clear:both;"></span>',
                 v, t, w, r, u;
@@ -69,7 +69,7 @@ var randomRelatedIndex, showRelatedPost;
                     v = (x[q].link[p].rel == "alternate") ? x[q].link[p].href : "#"
                 }
                 if (A == 2) {
-                    c += '<li><img alt="' + t + '" class="related-post-item-thumbnail" src="' + r + '" style="width:' + d.thumbnailSize + ';height:' + d.thumbnailSize + '" title="' + t + '"><a class="related-post-item-title" title="' + t + '" href="' + v + '"' + b + ">" + w + '</a><span class="related-post-item-summary"><span class="related-post-item-summary-text">' + u + '</span> <a href="' + v + '" class="related-post-item-more"' + b + ">" + d.moreText + "</a></span>" + y + "</li>"
+                    c += '<div><img alt="' + t + '" class="image" src="' + r + '" style="width:' + d.thumbnailSize + ';height:' + d.thumbnailSize + '" title="' + t + '"><a class="title" title="' + t + '" href="' + v + '"' + b + ">" + w + '</a><div class="desc">' + u + '</div> <a href="' + v + '" class="more"' + b + ">" + d.moreText + "</a>" + y + "</div>"
                 } else {
                     if (A == 3 || A == 4) {
                         c += '<li class="related-post-item" tabindex="0"><a class="related-post-item-title" href="' + v + '"' + b + '><img alt="' + t + '" class="related-post-item-thumbnail" src="' + r + '" style="width:' + d.thumbnailSize + ';height:' + d.thumbnailSize + '" title="' + t + '"></a><div class="related-post-item-tooltip"><a class="related-post-item-title" title="' + t + '" href="' + v + '"' + b + ">" + w + "</a></div>" + y + "</li>"
@@ -86,7 +86,7 @@ var randomRelatedIndex, showRelatedPost;
                     }
                 }
             }
-            s.innerHTML = c += "</ul>" + y;
+            s.innerHTML = c += "</div>" + y;
             d.callBack()
         };
     randomRelatedIndex = h;
