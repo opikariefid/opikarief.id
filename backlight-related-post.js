@@ -68,23 +68,7 @@ var randomRelatedIndex, showRelatedPost;
                 for (var p = 0, a = x[q].link.length; p < a; p++) {
                     v = (x[q].link[p].rel == "alternate") ? x[q].link[p].href : "#"
                 }
-                if (A == 2) {
-                    c += '<div class="backlight-related-post-content"><a class="title" title="' + t + ' href="' + v + '"' + b + '>' + w + '</a><div class="desc"><img alt="' + t + '" class="image" src="' + r + '" style="width:' + d.thumbnailSize + ';height:' + d.thumbnailSize + '" title="' + t + '"><div class="content">' + u.substr(0,300) + '</div>' + y + '</div><div class="jumplink"><a href="' + v + ' class="more" ' + b + '>' + d.moreText + '</a></div></div>'
-                } else {
-                    if (A == 3 || A == 4) {
-                        c += '<li class="related-post-item" tabindex="0"><a class="related-post-item-title" href="' + v + '"' + b + '><img alt="' + t + '" class="related-post-item-thumbnail" src="' + r + '" style="width:' + d.thumbnailSize + ';height:' + d.thumbnailSize + '" title="' + t + '"></a><div class="related-post-item-tooltip"><a class="related-post-item-title" title="' + t + '" href="' + v + '"' + b + ">" + w + "</a></div>" + y + "</li>"
-                    } else {
-                        if (A == 5) {
-                            c += '<li class="related-post-item" tabindex="0"><a class="related-post-item-wrapper" href="' + v + '" title="' + t + '"' + b + '><img alt="' + t + '" class="related-post-item-thumbnail" src="' + r + '" style="width:' + d.thumbnailSize + ';height:' + d.thumbnailSize + '" title="' + t + '"><span class="related-post-item-tooltip">' + w + "</span></a>" + y + "</li>"
-                        } else {
-                            if (A == 6) {
-                                c += '<li><a class="related-post-item-title" title="' + t + '" href="' + v + '"' + b + ">" + w + '</a><div class="related-post-item-tooltip"><img alt="' + t + '" class="related-post-item-thumbnail" src="' + r + '" style="width:' + d.thumbnailSize + ';height:' + d.thumbnailSize + '" title="' + t + '"><span class="related-post-item-summary"><span class="related-post-item-summary-text">' + u + "</span></span>" + y + "</div></li>"
-                            } else {
-                                c += '<li><a title="' + t + '" href="' + v + '"' + b + ">" + w + "</a></li>"
-                            }
-                        }
-                    }
-                }
+                c += '<div class="backlight-related-post-content"><a class="title" title="' + t + ' href="' + v + '"' + b + '>' + w + '</a><div class="desc"><img alt="' + t + '" class="image" src="' + r + '" style="width:' + d.thumbnailSize + ';height:' + d.thumbnailSize + '" title="' + t + '"><div class="content">' + u.substr(0,300) + '...</div>' + y + '</div><div class="jumplink"><a href="' + v + ' class="more" ' + b + '>' + d.moreText + '</a></div></div>'
             }
             s.innerHTML = c += "</div>" + y;
             d.callBack()
