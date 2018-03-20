@@ -1,3 +1,26 @@
+var labelArray = [ < b: if cond = 'data:post.labels' >
+    <
+    b: loop values = 'data:post.labels'
+    var = 'label' >
+    &
+    quot; < data: label.name / > & quot; <
+    b: if cond = 'data:label.isLast != &quot;true&quot;' > , <
+    /b:if> <
+    /b:loop> <
+    /b:if>
+];
+var relatedPostConfig = {
+    homePage: & quot; < data: blog.homepageUrl / > & quot;,
+    widgetTitle: & quot; & lt;h5 & gt;Artikel lainnya: & lt;
+    /h5&gt;&quot;,
+    numPosts: 5,
+    titleLength: & quot;auto & quot;,
+    containerId: & quot;related - post & quot;,
+    newTabLink: false,
+    widgetStyle: 1,
+    callBack: function() {}
+};
+
 var randomRelatedIndex, showRelatedPost;
 (function(n, m, k) {
     var d = {
