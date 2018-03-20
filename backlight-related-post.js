@@ -48,7 +48,7 @@ var randomRelatedIndex, showRelatedPost;
         g = function(z) {
             var s = document.getElementById(d.containerId),
                 x = l(z.feed.entry),
-                c = d.widgetTitle,
+                c = d.widgetTitle + '<div class="related-post-style">',
                 b = d.newTabLink ? ' target="_blank"' : "",
                 y = '<span style="display:block;clear:both;"></span>',
                 v, t, w, r, u;
