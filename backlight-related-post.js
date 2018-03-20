@@ -69,7 +69,7 @@ var randomRelatedIndex, showRelatedPost;
                     v = (x[q].link[p].rel == "alternate") ? x[q].link[p].href : "#"
                 }
                 if (A == 2) {
-                    c += '<div class="backlight-related-post-content"><a class="title" title="' + t + ' href="' + v + '"' + b + '>' + w + '</a><div class="desc"><img alt="' + t + '" class="image" src="' + r + '" style="width:' + d.thumbnailSize + ';height:' + d.thumbnailSize + '" title="' + t + '"><div class="content">' + u + '</div>' + y + '</div><div class="jumplink"><a href="' + v + ' class="more" ' + b + '>' + d.moreText + '</a></div></div>'
+                    c += '<div class="backlight-related-post-content"><a class="title" title="' + t + ' href="' + v + '"' + b + '>' + w + '</a><div class="desc"><img alt="' + t + '" class="image" src="' + r + '" style="width:' + d.thumbnailSize + ';height:' + d.thumbnailSize + '" title="' + t + '"><div class="content">' + u.substr(0,300) + '</div>' + y + '</div><div class="jumplink"><a href="' + v + ' class="more" ' + b + '>' + d.moreText + '</a></div></div>'
                 } else {
                     if (A == 3 || A == 4) {
                         c += '<li class="related-post-item" tabindex="0"><a class="related-post-item-title" href="' + v + '"' + b + '><img alt="' + t + '" class="related-post-item-thumbnail" src="' + r + '" style="width:' + d.thumbnailSize + ';height:' + d.thumbnailSize + '" title="' + t + '"></a><div class="related-post-item-tooltip"><a class="related-post-item-title" title="' + t + '" href="' + v + '"' + b + ">" + w + "</a></div>" + y + "</li>"
